@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: helloworld
-        image: https://sibaacr.azurecr.io/hello-world:1
+        image: sibaacr.azurecr.io/hello-world:1
         imagePullPolicy: IfNotPresent
         imagePullSecrets:
         - name: sops-gpg
