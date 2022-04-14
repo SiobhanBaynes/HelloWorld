@@ -23,7 +23,7 @@ spec:
         image: sibaacr.azurecr.io/hello-world:1
         imagePullPolicy: IfNotPresent
         imagePullSecrets:
-        - name: sops-gpg
+        - name: docker-registry
         ports:
         - name: http
           containerPort: 80
