@@ -20,17 +20,17 @@ spec:
     spec:
       containers:
       - name: helloworld
-        image: hello-world:latest
+        image: sibaacr.azurecr.io/hello-world:1
         imagePullPolicy: IfNotPresent
-        # imagePullSecrets:
-        # - name: docker-registry
+        imagePullSecrets:
+        - name: docker-registry
         ports:
         - name: http
           containerPort: 80
           protocol: TCP
-        # command:
-        # - ./dotnet
-        # - HelloWorld.dll
+        command:
+        - ./dotnet
+        - HelloWorld.dll
         livenessProbe:
           exec:
             command:
