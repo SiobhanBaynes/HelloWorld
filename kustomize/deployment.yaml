@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: helloworld
-        image: docker pull hello-world
+        image: hello-world:latest
         imagePullPolicy: IfNotPresent
         # imagePullSecrets:
         # - name: docker-registry
