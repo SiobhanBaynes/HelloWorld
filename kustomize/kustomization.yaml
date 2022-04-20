@@ -4,5 +4,4 @@ resources:
   - hpa.yaml
   - deployment.yaml
   - service.yaml
-  # Secret created manually for now
-  # - secret.yaml 
+  - secret.yaml 

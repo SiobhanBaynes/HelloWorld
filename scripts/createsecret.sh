@@ -12,6 +12,6 @@ export DOCKERCONFIGJSON=$(echo '{"auths":{"'$DOCKER_REGISTRY_SERVER'":{"username
 envsubst <./secret.template.yaml >../kustomize/secret.yaml
 sops --encrypt --in-place ../kustomize/secret.yaml
 
-# git add ../kustomize/secret.yaml
-# git commit -m "Updated secret by script $(date)"
-# git push
+git add ../kustomize/secret.yaml
+git commit -m "Updated secret by script $(date)"
+git push
