@@ -27,7 +27,7 @@ spec:
           containerPort: 80
           protocol: TCP
         command:
-        - ./dotnet
+        - dotnet
         - HelloWorld.dll
         livenessProbe:
           exec:
