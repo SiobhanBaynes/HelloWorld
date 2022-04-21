@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: helloworld
-        image: sibaacr.azurecr.io/hello-world:1
+        image: sibaacr.azurecr.io/hello-world:2
         imagePullPolicy: IfNotPresent
         ports:
         - name: http
