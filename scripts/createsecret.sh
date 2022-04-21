@@ -8,7 +8,7 @@ for varName in CLIENTID CLIENTSECRET DOCKER_REGISTRY_SERVER; do
     }
 done
 
-export DOCKERCONFIGJSON=$(echo '{"auths":{"'$DOCKER_REGISTRY_SERVER'":{"username":"'$CLIENTID'","password":"'$CLIENTSECRET'","auth":"'$(echo -n $CLIENTID:$CLIENTSECRET | base64)'"}}}' | base64 --wrap=0)
+export DOCKERCONFIGJSON=$(echo '{"auths":{"'$DOCKER_REGISTRY_SERVER'":{"username":"'$CLIENTID'","password":"'$CLIENTSECRET'","auth":"'$(echo -n $CLIENTID:$CLIENTSECRET | base64 --wrap=0)'"}}}' | base64 --wrap=0)
 envsubst <./secret.template.yaml >../kustomize/secret.yaml
 sops --encrypt --in-place ../kustomize/secret.yaml
 
